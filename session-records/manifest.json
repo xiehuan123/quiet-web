@@ -1,0 +1,51 @@
+{
+  "session_id": "01a090f0-806c-7003-a2cc-e391a4c5b922",
+  "live_snapshot": false,
+  "updated_at": "2026-09-11T19:11:19.354586+00:00",
+  "user_messages": 5,
+  "assistant_messages": 69,
+  "tool_calls_in_native_history": 664,
+  "queued_messages": 0,
+  "native_files": [
+    {
+      "source": ".runtime/codex-home/sessions/2026/09/11/rollout-2026-09-11T22-47-55-01a090f0-806c-7003-a2cc-e391a4c5b922.jsonl",
+      "archive": "raw/codex-native/main/rollout-2026-09-11T22-47-55-01a090f0-806c-7003-a2cc-e391a4c5b922.jsonl",
+      "session_id": "01a090f0-806c-7003-a2cc-e391a4c5b922",
+      "bytes": 9532368,
+      "sha256": "1e5de14b071b8e92c7dc9efc0e2adcd03cc8552bebd0a01f51c9ade79b100969"
+    },
+    {
+      "source": ".runtime/codex-home/sessions/2026/09/11/rollout-2026-09-11T22-49-48-01a090f2-37dd-7940-a2df-32e9217223cd.jsonl",
+      "archive": "raw/codex-native/development-subagents/rollout-2026-09-11T22-49-48-01a090f2-37dd-7940-a2df-32e9217223cd.jsonl",
+      "session_id": "01a090f2-37dd-7940-a2df-32e9217223cd",
+      "bytes": 703508,
+      "sha256": "f661d47cebf1b00baea50937a1737b7f134bff694665859b33a554a167f4eeaf"
+    },
+    {
+      "source": ".runtime/codex-home/sessions/2026/09/11/rollout-2026-09-11T22-50-18-01a090f2-ac5c-7b80-9215-8e3154059a34.jsonl",
+      "archive": "raw/codex-native/development-subagents/rollout-2026-09-11T22-50-18-01a090f2-ac5c-7b80-9215-8e3154059a34.jsonl",
+      "session_id": "01a090f2-ac5c-7b80-9215-8e3154059a34",
+      "bytes": 616160,
+      "sha256": "b098f9ad3d4013431df991fa792ee01bf9dbfc27d027e43b0b43bc21ac97b986"
+    },
+    {
+      "source": ".runtime/codex-home/sessions/2026/09/11/rollout-2026-09-11T23-37-12-01a0911d-9bfd-76e1-872f-fb033ba0597f.jsonl",
+      "archive": "raw/codex-native/development-subagents/rollout-2026-09-11T23-37-12-01a0911d-9bfd-76e1-872f-fb033ba0597f.jsonl",
+      "session_id": "01a0911d-9bfd-76e1-872f-fb033ba0597f",
+      "bytes": 3874943,
+      "sha256": "8ac6771549d0d9dbaae9051bb000ddd2b956b76c10c5cc4cad0ba065730d0e22"
+    },
+    {
+      "source": ".runtime/codex-home/sessions/2026/09/11/rollout-2026-09-11T23-37-28-01a0911d-dddc-7333-9f47-eb141bd1a347.jsonl",
+      "archive": "raw/codex-native/development-subagents/rollout-2026-09-11T23-37-28-01a0911d-dddc-7333-9f47-eb141bd1a347.jsonl",
+      "session_id": "01a0911d-dddc-7333-9f47-eb141bd1a347",
+      "bytes": 4934258,
+      "sha256": "6df49e9a1c906b39daff2a96ad64c4917c9e382c93b554aab2f5674bfefd33ae"
+    }
+  ],
+  "notes": [
+    "Native JSONL archives are byte copies at this snapshot time.",
+    "CLI combined stdout/stderr was credential-redacted by the runner.",
+    "Auth files and model-service configuration are not exported."
+  ]
+}
