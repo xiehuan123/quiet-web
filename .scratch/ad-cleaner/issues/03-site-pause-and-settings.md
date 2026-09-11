@@ -3,7 +3,7 @@
 **Type:** implementation  
 **Parent:** `../spec.md`  
 **Blocked by:** 01 — 网络保护与总开关; 02 — 高置信页面净化与可逆恢复  
-**Status:** ready-for-agent  
+**Status:** in-progress
 **Required skills:** `chrome-extensions`, `implement`, `tdd`, `product-designer`, `ui-designer`, `frontend-architect`, `code-review`  
 **Ownership:** exact-hostname pause policy, dynamic DNR adapter, popup site control and feedback, options allowlist management, recovery/persistence fixtures
 

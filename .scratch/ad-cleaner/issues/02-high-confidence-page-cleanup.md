@@ -26,7 +26,7 @@
 
 ## Evidence
 
-- 实现提交：待本地提交后回填。
+- 实现提交：`d68578e`。
 - 双轴审查：`reviews/ticket-02.md`；最终 Standards 硬问题 0，Spec finding 0。
 - 测试：31 项通过，TypeScript 与 WXT production build 通过。
 - 浏览器证据：`evidence/ticket-02/`；原始 MCP 记录为 `mcp-raw-log.md`。
