@@ -1,0 +1,16 @@
+uid=23_0 RootWebArea "广告净化" url="chrome-extension://ooadlcdjhdoaanegcfieeidedohkbnjg/popup.html"
+  uid=23_1 main
+    uid=23_2 heading "广告净化" level="1"
+    uid=23_3 StaticText "保护已开启"
+    uid=23_4 region "网络与页面保护"
+      uid=23_5 heading "网络与页面保护" level="2"
+      uid=23_6 StaticText "减少已知广告请求，并隐藏高置信广告容器。"
+      uid=23_7 switch "开启广告净化" checked
+      uid=23_8 StaticText "开启广告净化"
+    uid=23_9 region "当前页面"
+      uid=23_10 StaticText "当前页面"
+      uid=23_11 StaticText "127.0.0.1"
+      uid=23_12 StaticText "页面已隐藏"
+      uid=23_13 StaticText "3"
+    uid=23_14 status atomic live="polite" relevant="additions text"
+      uid=23_15 StaticText "设置只保存在这台电脑。"

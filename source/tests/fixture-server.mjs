@@ -8,6 +8,16 @@ const server = createServer(async (request, response) => {
     response.end(await readFile(new URL('./fixtures/ticket1.html', import.meta.url)));
     return;
   }
+  if (request.url === '/ticket2.html') {
+    response.setHeader('content-type', 'text/html; charset=utf-8');
+    response.end(await readFile(new URL('./fixtures/ticket2.html', import.meta.url)));
+    return;
+  }
+  if (request.url === '/ticket2.js') {
+    response.setHeader('content-type', 'text/javascript; charset=utf-8');
+    response.end(await readFile(new URL('./fixtures/ticket2.js', import.meta.url)));
+    return;
+  }
   if (request.url === '/allowed-pixel.svg') {
     response.setHeader('content-type', 'image/svg+xml');
     response.end('<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect width="8" height="8" fill="#18715f"/></svg>');

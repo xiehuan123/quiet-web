@@ -7,6 +7,7 @@ const summary = document.querySelector<HTMLElement>('#summary')!;
 const currentSite = document.querySelector<HTMLElement>('#current-site')!;
 const hiddenCount = document.querySelector<HTMLElement>('#hidden-count')!;
 const feedback = document.querySelector<HTMLElement>('#feedback')!;
+let targetTabId: number | null = null;
 
 function setFeedback(message: string, kind: 'neutral' | 'success' | 'error' = 'neutral') {
   feedback.textContent = message;
@@ -15,6 +16,13 @@ function setFeedback(message: string, kind: 'neutral' | 'success' | 'error' = 'n
 function renderEnabled(enabled: boolean) {
   toggle.checked = enabled;
   summary.textContent = enabled ? '保护已开启' : '保护已暂停';
+}
+async function refreshPageStatus() {
+  if (targetTabId === null) return;
+  try {
+    const status = await browser.tabs.sendMessage(targetTabId, { type: 'GET_PAGE_STATUS' }) as PageStatusResponse;
+    hiddenCount.textContent = status?.ok ? String(status.hiddenCount) : '—';
+  } catch { hiddenCount.textContent = '需刷新页面'; }
 }
 
 async function loadPopup() {
@@ -32,10 +40,8 @@ async function loadPopup() {
     }
     currentSite.textContent = new URL(tab.url).hostname;
     if (typeof tab.id === 'number') {
-      try {
-        const status = await browser.tabs.sendMessage(tab.id, { type: 'GET_PAGE_STATUS' }) as PageStatusResponse;
-        hiddenCount.textContent = status?.ok ? String(status.hiddenCount) : '—';
-      } catch { hiddenCount.textContent = '需刷新页面'; }
+      targetTabId = tab.id;
+      await refreshPageStatus();
     }
   } catch (error) {
     toggle.disabled = true;
@@ -52,6 +58,7 @@ toggle.addEventListener('change', async () => {
     const response = await browser.runtime.sendMessage({ type: 'SET_ENABLED', enabled: requested }) as SettingsResponse;
     if (!response?.ok) throw new Error(response?.error || '状态更新失败');
     renderEnabled(response.settings.enabled);
+    await refreshPageStatus();
     setFeedback(requested ? '保护已开启；刷新页面后网络规则完整生效。' : '页面改动已恢复；刷新后恢复网络请求。', 'success');
   } catch (error) {
     toggle.checked = !requested;

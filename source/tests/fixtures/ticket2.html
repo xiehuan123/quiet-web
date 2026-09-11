@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="utf-8"><title>广告净化页面过滤测试</title><script src="/ticket2.js" defer></script></head>
+  <body style="overflow: hidden">
+    <header><nav id="primary-nav"><a href="#article">阅读正文</a></nav></header>
+    <aside id="floating-ad" data-ad data-ad-slot="top"><span>广告</span><button data-ad-close>关闭广告</button></aside>
+    <div id="ad-overlay" data-ad-overlay data-ad-scroll-lock="true"><span>广告</span><button data-ad-close>跳过广告</button></div>
+    <main id="article" data-ad data-ad-slot="article"><h1>受保护正文</h1><p>这篇正文讨论广告行业。</p><button data-ad-close>普通关闭按钮</button></main>
+    <form id="login" data-ad aria-label="Advertisement"><label>密码 <input type="password"></label></form>
+    <div id="dialog-decoy" class="ad-popup" role="dialog" style="position: fixed; top: 8px; right: 8px">普通帮助弹窗</div>
+    <section aria-label="动态内容测试"><button id="insert-ad" type="button">插入动态广告</button><div id="dynamic-root"></div></section>
+  </body>
+</html>

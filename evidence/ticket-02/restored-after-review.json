@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-09-12T00:48:56+08:00",
+  "trigger": "Chrome DevTools MCP real click on native popup master switch",
+  "hidden_ids": [],
+  "all_ad_nodes_connected": true,
+  "body_inline_overflow": "hidden",
+  "protected_visible": {
+    "article": true,
+    "login": true,
+    "dialog-decoy": true,
+    "primary-nav": true
+  },
+  "popup_hidden_count": 0,
+  "popup_feedback": "页面改动已恢复；刷新后恢复网络请求。"
+}

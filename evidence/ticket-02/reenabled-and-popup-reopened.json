@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-09-12T00:14:06+08:00",
+  "master_enabled": true,
+  "hidden_ids": [
+    "floating-ad",
+    "ad-overlay",
+    "dynamic-ad"
+  ],
+  "nodes_still_connected": true,
+  "body_inline_overflow": "auto",
+  "protected_content_visible": true,
+  "popup_reopened": true,
+  "popup_hidden_count": 3,
+  "popup_feedback_after_reopen": "设置只保存在这台电脑。",
+  "method": "Chrome DevTools MCP real popup re-enable, close native popup, trigger native action again, and inspect reopened popup plus page DOM"
+}

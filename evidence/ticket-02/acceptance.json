@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "candidate": {
+    "fingerprint_sha256": "c74c6a32e30152043744f48f379e437634c00af4eaf78d0ef1764d305030b875",
+    "files": [
+      { "path": "_metadata/generated_indexed_rulesets/_ruleset1", "sha256": "b786ad2c3eb9c6b84b85fd612c13f9e190128b881832b64784338b4a1b22a606" },
+      { "path": "assets/popup-D0huK-UI.css", "sha256": "d60fa350797509ee8fc566524ef549f269cd1bc199cf4a6ac914f09fba2ebbb8" },
+      { "path": "background.js", "sha256": "8a04d072e9b0167d48efa2c5a40e3706374b12d456c420f8d0dd5f313c774a8d" },
+      { "path": "chunks/popup-Cal9Kbhy.js", "sha256": "8209cc2750efd3c8b02d1d9bd3570dca8d32363a537a1a065e200b86a2faa93c" },
+      { "path": "content-scripts/content.css", "sha256": "6b3857b10bcfa37468c0b00a9071f3af154d36a17639dbd4901f6641aca971e5" },
+      { "path": "content-scripts/content.js", "sha256": "d097297d14bcda5b3821cd2c87c736bf66f233b89fe5b2bd2a244138bf71ad4b" },
+      { "path": "icon/128.png", "sha256": "1667f7e8272214318595c3ae96f7289a54087026c3dd18988e6de759c48a9637" },
+      { "path": "icon/16.png", "sha256": "dcda2bb18038b4ec18a675bb09a3661b6c786f47172ea7f355f3b51738b8c8c7" },
+      { "path": "icon/32.png", "sha256": "da2f11c05c63a5d7ca57566dc220ecdcac086b5f3b943a5d3cbb941c41783340" },
+      { "path": "icon/48.png", "sha256": "dfc2fb9e6687fab17fefb070fd9e5783dc0acef4c22ce52cb6b8c8448e2878df" },
+      { "path": "icon/96.png", "sha256": "3ca112c1711f9a3718aeb38a29c7d0812c2f8cdad803d93a83f7f0a47780ab95" },
+      { "path": "manifest.json", "sha256": "59cad43475f7babc16fb739e3d4000ac547dec40e338d5993d30a3fc9a053be3" },
+      { "path": "popup.html", "sha256": "584a07300986742fc81c96c231362aec45086c2c71b2041041acc09ce902b29b" },
+      { "path": "rules/network-rules.json", "sha256": "a5b4c728e3338b8783ea43238b54fd986890728bb6656c0b8caee307549a89d8" }
+    ]
+  },
+  "environment": {
+    "automation_provider": "chrome-devtools-mcp",
+    "browser_name": "HeadlessChrome",
+    "browser_version": "153.0.0.0",
+    "extension_id": "ooadlcdjhdoaanegcfieeidedohkbnjg",
+    "installation_type": "unpacked"
+  },
+  "browser_choice": {
+    "default_provider": "playwright-mcp",
+    "selected_provider": "chrome-devtools-mcp",
+    "reason": "The user explicitly selected the project-isolated Chrome DevTools MCP because the default Playwright MCP was not configured for extension install/action control.",
+    "user_decision": { "status": "approved", "evidence_path": "browser-choice-user-decision.md" }
+  },
+  "required_scenarios": ["install", "native_entry", "primary_flow", "reopen"],
+  "scenarios": [
+    {
+      "id": "install", "required": true, "status": "passed", "method": "real_browser_tool",
+      "steps": ["Reloaded the exact production WXT directory with Chrome DevTools MCP.", "Listed the enabled extension and inspected the real browser user agent."],
+      "expected": "The current production candidate is active as an unpacked extension in the isolated browser.",
+      "actual": "Extension ooadlcdjhdoaanegcfieeidedohkbnjg was reloaded and listed as 广告净化 v0.1.0 Enabled in HeadlessChrome 153.0.0.0.",
+      "artifactPaths": ["mcp-raw-log.md", "browser-environment.json"]
+    },
+    {
+      "id": "native_entry", "required": true, "status": "passed", "method": "real_browser_tool", "entry_kind": "native_action",
+      "steps": ["Selected the local HTTP fixture.", "Triggered the installed extension action by ID.", "Waited for and inspected the popup created by the native action."],
+      "expected": "The native popup reports the supported current host and actual hidden count.",
+      "actual": "Popup showed 保护已开启, 127.0.0.1, and 页面已隐藏 3.",
+      "artifactPaths": ["popup-reopened-final.snapshot.txt", "mcp-raw-log.md"]
+    },
+    {
+      "id": "primary_flow", "required": true, "status": "passed", "method": "real_browser_tool",
+      "steps": ["Reloaded the fixture after reloading the exact build.", "Observed two static ad containers and protected controls.", "Clicked the fixture's real insert button through MCP.", "Observed the extension process the dynamically inserted ad."],
+      "expected": "High-confidence static and dynamic ads are hidden without removal while main, navigation, login, and ordinary dialog content stay visible.",
+      "actual": "floating-ad, ad-overlay, and dynamic-ad received the extension marker and remained connected; article, login, dialog-decoy, and primary-nav remained unmarked; body overflow changed only for the associated ad lock.",
+      "artifactPaths": ["static-filter-state-after-review.json", "dynamic-filter-state-after-review.json", "page-filtered-after-review.png", "mcp-raw-log.md"]
+    },
+    {
+      "id": "reopen", "required": true, "status": "passed", "method": "real_browser_tool", "entry_kind": "native_action",
+      "steps": ["Turned the real popup master switch off and inspected the live page.", "Turned protection back on.", "Closed the popup, triggered the native action again, and inspected the new popup."],
+      "expected": "Turning protection off restores only extension changes, re-enabling filters again, and popup close/reopen preserves the enabled setting and count.",
+      "actual": "Off removed all extension markers, preserved every node, restored body overflow to hidden, retained protected content, and updated the popup count to 0; re-enable hid all three ads again; reopened popup stayed enabled and showed count 3.",
+      "artifactPaths": ["restored-after-review.json", "popup-master-off-final.snapshot.txt", "popup-reopened-final.snapshot.txt", "mcp-raw-log.md"]
+    }
+  ]
+}

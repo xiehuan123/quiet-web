@@ -1,0 +1,12 @@
+{
+  "automation_provider": "chrome-devtools-mcp",
+  "browser_name": "HeadlessChrome",
+  "browser_version": "153.0.0.0",
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+  "extension_id": "ooadlcdjhdoaanegcfieeidedohkbnjg",
+  "extension_name": "广告净化",
+  "extension_version": "0.1.0",
+  "extension_status": "Enabled",
+  "installation_type": "unpacked",
+  "loaded_directory": "/Users/xiehuan/Desktop/浏览器插件/quiet-web/source/.output/chrome-mv3"
+}

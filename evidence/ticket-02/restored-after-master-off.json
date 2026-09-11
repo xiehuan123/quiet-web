@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-09-12T00:11:37+08:00",
+  "master_enabled": false,
+  "hidden_ids": [],
+  "nodes_still_connected": {
+    "floating-ad": true,
+    "ad-overlay": true,
+    "dynamic-ad": true
+  },
+  "body_inline_overflow": "hidden",
+  "protected_content_visible": true,
+  "popup_feedback": "页面改动已恢复；刷新后恢复网络请求。",
+  "method": "Chrome DevTools MCP native extension action, then real popup switch click and page DOM observation"
+}

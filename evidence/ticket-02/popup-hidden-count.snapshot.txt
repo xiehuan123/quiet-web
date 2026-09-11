@@ -1,0 +1,45 @@
+uid=12_0 RootWebArea "广告净化" url="chrome-extension://ooadlcdjhdoaanegcfieeidedohkbnjg/popup.html"
+  uid=12_1 ignored
+    uid=12_2 ignored
+      uid=12_3 main
+        uid=12_4 sectionheader
+          uid=12_5 ignored
+            uid=12_6 heading "广告净化" level="1"
+              uid=12_7 StaticText "广告净化"
+                uid=12_8 InlineTextBox "广告净化"
+            uid=12_9 paragraph
+              uid=12_10 StaticText "保护已开启"
+                uid=12_8 InlineTextBox "保护已开启"
+        uid=12_11 region "网络与页面保护"
+          uid=12_12 ignored
+            uid=12_13 heading "网络与页面保护" level="2"
+              uid=12_14 StaticText "网络与页面保护"
+                uid=12_8 InlineTextBox "网络与页面保护"
+            uid=12_15 paragraph
+              uid=12_16 StaticText "减少已知广告请求，并隐藏高置信广告容器。"
+                uid=12_8 InlineTextBox "减少已知广告请求，并隐藏高置信广告容"
+                uid=12_8 InlineTextBox "器。"
+          uid=12_17 LabelText
+            uid=12_18 switch "开启广告净化" checked
+            uid=12_19 ignored
+            uid=12_20 ignored
+              uid=12_21 StaticText "开启广告净化"
+                uid=12_8 InlineTextBox "开启广告净化"
+        uid=12_22 region "当前页面"
+          uid=12_23 ignored
+            uid=12_24 ignored
+              uid=12_25 StaticText "当前页面"
+                uid=12_8 InlineTextBox "当前页面"
+            uid=12_26 strong
+              uid=12_27 StaticText "127.0.0.1"
+                uid=12_8 InlineTextBox "127.0.0.1"
+          uid=12_28 ignored
+            uid=12_29 ignored
+              uid=12_30 StaticText "页面已隐藏"
+                uid=12_8 InlineTextBox "页面已隐藏"
+            uid=12_31 strong
+              uid=12_32 StaticText "3"
+                uid=12_8 InlineTextBox "3"
+        uid=12_33 status atomic live="polite" relevant="additions text"
+          uid=12_34 StaticText "设置只保存在这台电脑。"
+            uid=12_8 InlineTextBox "设置只保存在这台电脑。"
