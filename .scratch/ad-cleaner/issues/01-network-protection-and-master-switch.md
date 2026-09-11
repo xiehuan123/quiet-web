@@ -31,9 +31,10 @@ DOM 元素隐藏、本站允许清单、设置页和最终跨功能回归由后�
 - Gate: `evidence/ticket-01/gate-report-after-review.json` (`gate_passed: true`).
 - Review: `reviews/ticket-01.md` (Standards: no hard findings; Spec: 0 after fixes).
 - Diagnostics: `records/diagnostics/ticket-01-native-target.md`.
-- Recoverable commit: recorded in the follow-up comment after commit creation.
+- Recoverable implementation commit: `d6e5c12`.
 
 ## Comments
 
 - 技术默认由本轮明确授权的主编排决定；Local Markdown 发布即生效。
 - Completed after red/green tests, real native action validation, review fixes, independent re-review, and the current-candidate gate.
+- Local commit `d6e5c12` records the implementation and evidence; no remote action was taken.

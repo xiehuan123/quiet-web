@@ -3,7 +3,7 @@
 **Type:** implementation  
 **Parent:** `../spec.md`  
 **Blocked by:** 01 — 网络保护与总开关  
-**Status:** ready-for-agent  
+**Status:** in-progress
 **Required skills:** `chrome-extensions`, `implement`, `tdd`, `code-review`  
 **Ownership:** filtering policy module, site profiles, content script adapter and CSS, DOM fixtures and performance-boundary tests
 
