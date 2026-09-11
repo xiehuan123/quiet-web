@@ -1,6 +1,6 @@
 # 广告净化 0.1.0 最终报告
 
-**状态：首轮 Standards/Spec 审查缺陷已修复，待独立复审。** 功能实现、production build、`extension/` 真实安装、集中浏览器流程、acceptance gate 和 release bundle 均已完成；本地提交将在复审结论写回后执行。
+**状态：完成。** 功能实现、production build、`extension/` 真实安装、集中浏览器流程、acceptance gate、release bundle 和固定基线 Standards/Spec 独立双轴审查均已完成并通过。
 
 ## 实现功能
 
@@ -38,5 +38,5 @@
 - 技能调用：`records/skill-invocations.md`
 - 构建方式：`BUILD.md`
 - 首轮审查修复记录：`records/diagnostics/final-review-remediation.md`
-- 最终审查：待复审后写入 `reviews/final.md`
-- 本地提交：01 `d6e5c12`；02 `d68578e`；03 与最终交付待复审后回填。
+- 最终审查：`reviews/final.md`；Standards/Spec 均 PASS，硬问题 0，finding 0。
+- 本地提交：01 `d6e5c12`；02 `d68578e`；03 与最终交付 `4ee2663`；工单与报告收尾为本报告所在的后续本地提交。
