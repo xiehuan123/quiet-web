@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+.runtime/
+.codex-run/
+.output/
+dist/
+coverage/
+__pycache__/
+*.pyc
+.extension-launch/browser-profile*/
