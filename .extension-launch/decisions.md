@@ -10,5 +10,7 @@
 | D-004 | 技术脚手架 | WXT + Vanilla TypeScript，源码 `source/` | AI 可逆默认，2026-09-11 | adopted | 构建、测试、extension 复制 | 无 |
 | D-005 | 首版过滤边界 | 自有小规模 DNR + 多信号可撤销 DOM；不引入第三方列表 | 官方资料复核与用户要求，2026-09-11 | confirmed | 规则、保护、许可、验收 | 无 |
 | D-006 | 测试 seam | 规则结果、页面过滤结果、真实原生浏览器流程 | 用户授权机械决策 + TDD，2026-09-11 | adopted | 每票测试与审查 | 无 |
+| D-007 | 本站网络放行 | 精确 hostname 的优先级 100 `allowAllRequests` 动态 frame 规则；保留 ID 范围内确定性碰撞处理；存储失败补偿恢复规则 | Chrome 官方 DNR 复核 + AI 技术默认，2026-09-12 | adopted | AC-16～24 | 无 |
+| D-008 | 设置页入口 | WXT options entrypoint 声明 `open_in_tab=true`；popup 真实点击用 `tabs.create` 打开随包 `options.html`，避免 headless 嵌入式 Chrome 页面不可操作 | 真实 MCP 诊断，2026-09-12 | adopted | AC-20、24、27 | 初始 `openOptionsPage()` |
 
 初始化未添加任何用户确认。浏览器默认值仅记录在 state.json 与 spec.md 中作为暂定方案。

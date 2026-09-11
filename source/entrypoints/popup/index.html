@@ -15,9 +15,16 @@
       </section>
       <section class="status-card" aria-label="当前页面">
         <div class="status-row"><span>当前页面</span><strong id="current-site">正在识别…</strong></div>
+        <div class="status-row"><span>网络保护</span><strong id="network-state">正在读取…</strong></div>
         <div class="status-row"><span>页面已隐藏</span><strong id="hidden-count">—</strong></div>
       </section>
+      <section class="site-card" aria-labelledby="site-heading">
+        <div><h2 id="site-heading">本站控制</h2><p id="site-state">正在读取本站状态…</p></div>
+        <button id="site-toggle" class="primary-button" type="button" disabled>暂停本站</button>
+      </section>
       <p id="feedback" class="feedback" role="status" aria-live="polite">设置只保存在这台电脑。</p>
+      <button id="open-options" class="text-button" type="button">管理暂停列表与使用边界</button>
+      <p class="privacy-note">设置仅保存在本机，不上传页面内容。网络规则变化需刷新；不能保证所有网站完全无广告。</p>
     </main>
     <script type="module" src="./main.ts"></script>
   </body>

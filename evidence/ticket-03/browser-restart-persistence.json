@@ -1,0 +1,33 @@
+{
+  "method": "Set two non-default values through the final extension UI, normally terminated only the Chrome main process carrying the exact project --user-data-dir, kept the MCP service alive, triggered relaunch with list_pages, then reinstalled the same final extension path.",
+  "candidate_fingerprint_sha256": "06ae81d30a4a5dd075df2851cca542456f7dd515ae7b264fb37f60e90b78b099",
+  "extension_id": "bppfpejancflkakphbgloeaidofdcfic",
+  "before_relaunch": {
+    "installed_path": "/Users/xiehuan/Desktop/浏览器插件/quiet-web/extension",
+    "settings": { "enabled": false, "allowedHosts": ["127.0.0.1"] },
+    "enabled_rulesets": [],
+    "dynamic_rule": {
+      "id": 1144953630,
+      "priority": 100,
+      "action": "allowAllRequests",
+      "regex_filter": "^https?://127\\.0\\.0\\.1(?::[0-9]+)?(?:/|$)"
+    },
+    "browser_main_pid": 39814,
+    "process_scope": "Exact --user-data-dir=/Users/xiehuan/Desktop/浏览器插件/quiet-web/.runtime/browser-profile; normal TERM only."
+  },
+  "after_mcp_relaunch_before_reinstall": {
+    "pages": ["about:blank"],
+    "installed_extensions": []
+  },
+  "after_same_final_path_reinstall": {
+    "extension_id": "bppfpejancflkakphbgloeaidofdcfic",
+    "settings": { "enabled": false, "allowedHosts": ["127.0.0.1"] },
+    "enabled_rulesets": [],
+    "dynamic_rule_id": 1144953630,
+    "fixture_hidden_count": 0,
+    "known_ad_request": 404,
+    "native_popup": ["保护已暂停", "全局暂停", "本站已暂停"]
+  },
+  "restored_final_state_through_ui": { "enabled": true, "allowedHosts": [] },
+  "boundary": "The fixed profile retained storage and DNR state for the same final extension ID, but the MCP launcher did not retain unpacked-extension registration. Reinstalling the same final directory restored the same ID and both non-default settings. This does not claim store/policy installation persistence."
+}

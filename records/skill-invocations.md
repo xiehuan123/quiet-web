@@ -19,6 +19,7 @@ All paths are inside this isolated project. Hashes are SHA-256 of the entry file
 | `frontend-architect` | `346645cc2e92860c11f96ccc7e66c1a1753fad4fd88cea9cfe3e7f4eabff1095` | Vanilla TS extension UI and state ownership | Shared domain modules plus thin Chrome/UI adapters | executed |
 | `implement` | `6d3fd9e83b8f36e5213854779db49b256a457a7ebb4a503e53fa7dcff696adc3` | Ticket 02 high-confidence page cleanup | `source/lib/page-filter.ts`, content adapter, tests, `evidence/ticket-02/` | executed (ticket 02) |
 | `code-review` | `9cf46653dd9c710ea1e6c22423caf31a794c88773bc94bdaa23140277f470442` | Ticket 02 fixed baseline `90f738d` | `reviews/ticket-02.md`; independent Standards and Spec review chains | executed (ticket 02) |
+| `implement` | `6d3fd9e83b8f36e5213854779db49b256a457a7ebb4a503e53fa7dcff696adc3` | Ticket 03 exact-host pause, settings and persistence | `source/lib/site-policy.ts`, popup/options/background, `evidence/ticket-03/` | executed (ticket 03) |
 
 ## Authorized workflow adaptations
 
@@ -30,3 +31,4 @@ The upstream setup/spec/ticket skills normally pause for confirmation. This run'
 - Native popup target and active URL permission: `records/diagnostics/ticket-01-native-target.md`; red regression tests and real action revalidation complete.
 - WXT content style entrypoint collision: `records/diagnostics/ticket-02-wxt-entrypoint-name.md`; imported stylesheet moved outside `entrypoints/` and full build reverified.
 - Ticket 02 dynamic fixture pointer overlap: `records/diagnostics/ticket-02-dynamic-fixture-click.md`; overlay position corrected and real MCP pointer retest passed.
+- Ticket 03 options entrypoint: `records/diagnostics/ticket-03-options-entry.md`; WXT entrypoint metadata and real packaged-tab opening were corrected and MCP-retested.

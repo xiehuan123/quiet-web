@@ -1,0 +1,27 @@
+{
+  "candidate_fingerprint_sha256": "06ae81d30a4a5dd075df2851cca542456f7dd515ae7b264fb37f60e90b78b099",
+  "abp_test_pages": {
+    "url": "https://abptestpages.org/en/filters/blocking",
+    "title": "Blocking - ABP Test Pages",
+    "extension_hidden_count": 0,
+    "visible_headings": ["ABP Test Pages", "Blocking", "Full Path", "Partial Path", "Wildcard", "Dynamic", "Deep subdomains"],
+    "network": { "request_count": 9, "document": 200, "css": 200, "script": 200, "test_images_200": 6, "blocked_by_client": 0 },
+    "console": { "message_count": 0 },
+    "support_mapping": [
+      { "capability": "Basic MV3 URL blocking", "status": "supported only for the six packaged, self-owned known-ad endpoint rules", "evidence": "The final local fixture's googlesyndication request was blocked while its normal document/image loaded." },
+      { "capability": "ABP Full/Partial/Wildcard/Dynamic/Deep-subdomain filter syntax matrix", "status": "out_of_scope", "evidence": "All six ABP test images returned 200; no subscription or ABP syntax engine is claimed." },
+      { "capability": "High-confidence element hiding and bounded DOM mutation", "status": "supported only by the packaged multi-signal DOM policy", "evidence": "Verified on final local static/dynamic fixtures; the ABP Blocking page is a network fixture and remained unmodified." }
+    ]
+  },
+  "normal_site": {
+    "url": "https://example.com/",
+    "title": "Example Domain",
+    "heading": "Example Domain",
+    "paragraph_count": 2,
+    "visible_links": ["Learn more"],
+    "extension_hidden_count": 0,
+    "network": { "request_count": 1, "document": 200 },
+    "console": { "message_count": 0 }
+  },
+  "privacy": "No login, form submission, purchase, or private account was used."
+}

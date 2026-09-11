@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="manifest.open_in_tab" content="true" />
+    <title>广告净化设置</title>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <div class="brand-mark" aria-hidden="true">净</div>
+        <div><p class="eyebrow">广告净化</p><h1>设置</h1><p>管理按精确 hostname 暂停的网站。</p></div>
+      </header>
+
+      <section class="panel" aria-labelledby="allowlist-heading">
+        <div class="panel-heading">
+          <div><h2 id="allowlist-heading">暂停的网站</h2><p>只影响列出的精确 hostname，不自动包含其他子域名。</p></div>
+          <button id="clear-all" class="danger-button" type="button" disabled>清空暂停列表</button>
+        </div>
+        <ul id="allowlist" class="allowlist" aria-live="polite"></ul>
+        <p id="empty-state" class="empty-state" tabindex="-1">还没有暂停任何网站。</p>
+      </section>
+
+      <section class="panel boundaries" aria-labelledby="boundaries-heading">
+        <h2 id="boundaries-heading">使用与边界</h2>
+        <ul>
+          <li>设置只保存在这台电脑，不上传页面内容。</li>
+          <li>暂停或恢复网络规则后需要刷新页面，已经阻断的响应无法即时找回。</li>
+          <li>扩展只处理小规模已知广告请求和多信号高置信广告容器，不能保证所有网站完全无广告。</li>
+          <li>不会绕过付费墙、验证码、登录、支付、安全确认或 cookie 选择。</li>
+        </ul>
+      </section>
+
+      <p id="feedback" class="feedback" role="status" aria-live="polite">正在读取本机设置…</p>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

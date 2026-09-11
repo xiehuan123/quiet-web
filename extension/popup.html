@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广告净化</title>
+    <meta name="manifest.type" content="browser_action">
+    <script type="module" crossorigin src="/chunks/popup-CpLdL2J-.js"></script>
+    <link rel="modulepreload" crossorigin href="/chunks/browser-DKnVyUgM.js">
+    <link rel="stylesheet" crossorigin href="/assets/popup-CYwBxoJJ.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header"><div class="brand-mark" aria-hidden="true">净</div><div><h1>广告净化</h1><p id="summary">正在读取保护状态…</p></div></header>
+      <section class="control" aria-labelledby="master-label">
+        <div><h2 id="master-label">网络与页面保护</h2><p>减少已知广告请求，并隐藏高置信广告容器。</p></div>
+        <label class="switch"><input id="master-toggle" type="checkbox" role="switch" disabled><span aria-hidden="true"></span><span class="sr-only">开启广告净化</span></label>
+      </section>
+      <section class="status-card" aria-label="当前页面">
+        <div class="status-row"><span>当前页面</span><strong id="current-site">正在识别…</strong></div>
+        <div class="status-row"><span>网络保护</span><strong id="network-state">正在读取…</strong></div>
+        <div class="status-row"><span>页面已隐藏</span><strong id="hidden-count">—</strong></div>
+      </section>
+      <section class="site-card" aria-labelledby="site-heading">
+        <div><h2 id="site-heading">本站控制</h2><p id="site-state">正在读取本站状态…</p></div>
+        <button id="site-toggle" class="primary-button" type="button" disabled>暂停本站</button>
+      </section>
+      <p id="feedback" class="feedback" role="status" aria-live="polite">设置只保存在这台电脑。</p>
+      <button id="open-options" class="text-button" type="button">管理暂停列表与使用边界</button>
+      <p class="privacy-note">设置仅保存在本机，不上传页面内容。网络规则变化需刷新；不能保证所有网站完全无广告。</p>
+    </main>
+  </body>
+</html>

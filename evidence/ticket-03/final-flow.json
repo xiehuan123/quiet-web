@@ -1,0 +1,41 @@
+{
+  "candidate_fingerprint_sha256": "06ae81d30a4a5dd075df2851cca542456f7dd515ae7b264fb37f60e90b78b099",
+  "network_enabled": { "fixture": 200, "local_image": 200, "known_ad_request": "net::ERR_BLOCKED_BY_CLIENT" },
+  "page_filtering": {
+    "static_hidden": ["site-ad", "site-overlay"],
+    "protected_visible": ["content", "site-nav", "protected-login", "protected-otp", "protected-captcha", "protected-payment", "protected-security", "protected-cookie", "protected-paywall", "fixed-decoy", "dialog-decoy", "popup-class-decoy"],
+    "protected_marked_by_extension": [],
+    "hidden_nodes_removed": false,
+    "overflow_while_filtered": "auto"
+  },
+  "dynamic_fixture": {
+    "trigger": "Real click on the fixture's 插入动态广告 button",
+    "hidden": ["floating-ad", "ad-overlay", "dynamic-ad"],
+    "dynamic_node_connected": true,
+    "protected_visible": ["article", "login", "dialog-decoy", "primary-nav"]
+  },
+  "site_pause_restore": {
+    "pause_feedback": "本站页面内容已恢复；刷新后恢复网络请求。",
+    "paused_hidden_count": 0,
+    "paused_overflow": "hidden",
+    "paused_ad_nodes_connected": true,
+    "known_ad_request_after_refresh": 404,
+    "restored_feedback": "本站保护已恢复；刷新后网络规则完整生效。",
+    "known_ad_request_after_restore_refresh": "net::ERR_BLOCKED_BY_CLIENT"
+  },
+  "options_allowlist": {
+    "sorted_initial_hosts": ["127.0.0.1", "example.com"],
+    "after_single_remove": ["example.com"],
+    "focus_after_single_remove": "恢复 example.com 的保护",
+    "after_clear_all": [],
+    "empty_state_focused": true,
+    "clear_feedback": "暂停列表已清空；刷新相关网站后网络规则完整生效。"
+  },
+  "master_switch": {
+    "off_hidden_count": 0,
+    "popup_reopen_state": "保护已暂停",
+    "browser_reopen_before": { "enabled": false, "allowedHosts": ["127.0.0.1"] },
+    "browser_reopen_after": { "enabled": false, "allowedHosts": ["127.0.0.1"] },
+    "final_restored_state": { "enabled": true, "allowedHosts": [] }
+  }
+}

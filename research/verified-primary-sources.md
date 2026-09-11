@@ -88,6 +88,12 @@
 - 公开抽检：ABP Test Pages 仅验证已声明支持的 basic blocking、普通 element hiding 和受限 DOM mutation 子集；再选择少量匿名可访问的真实普通网站观察正文、导航和基础交互是否完整。不登录、不提交表单、不购买。
 - 报告必须分开记录“已阻止网络请求”“已隐藏 DOM 元素”“范围外/未验证”，并保留截图与原始自动化工具记录；计数不能替代页面效果和误伤检查。
 
+## 2026-09-12 动态允许规则复核
+
+再次核对 Chrome 官方 DNR API：`allowAllRequests` 会允许匹配 frame hierarchy 内的请求，条件必须指定且只能使用 `main_frame`/`sub_frame` 资源类型；高于 block 规则的开发者优先级会使较低优先级规则不再生效。`updateDynamicRules()` 的单次 remove/add 是原子的，动态规则跨浏览器会话和扩展升级持久化。[Chrome DNR API](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest)
+
+据此，本站暂停使用优先级 100 的 `allowAllRequests` 动态规则，只让精确 hostname 的 HTTP(S) frame URL 正则匹配；不使用会自动覆盖子域名的 `initiatorDomains`。扩展每次以保留 ID 范围整体重建自身站点规则，并在持久设置写入失败时恢复上一个动态规则集合。
+
 ## 一手来源索引
 
 1. [Chrome DNR API](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest)

@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-09-12T02:55:19+08:00",
+  "automation_provider": "chrome-devtools-mcp",
+  "browser_name": "HeadlessChrome",
+  "browser_version": "153.0.0.0",
+  "extension_id": "bppfpejancflkakphbgloeaidofdcfic",
+  "extension_name": "广告净化",
+  "extension_version": "0.1.0",
+  "extension_status": "Enabled",
+  "installation_type": "unpacked",
+  "loaded_directory": "/Users/xiehuan/Desktop/浏览器插件/quiet-web/extension",
+  "candidate_fingerprint_sha256": "06ae81d30a4a5dd075df2851cca542456f7dd515ae7b264fb37f60e90b78b099"
+}

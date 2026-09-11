@@ -9,6 +9,7 @@ export default defineConfig({
     version: '0.1.0',
     minimum_chrome_version: '121',
     permissions: ['storage', 'tabs', 'declarativeNetRequest'],
+    options_ui: { page: 'options.html', open_in_tab: true },
     declarative_net_request: {
       rule_resources: [{ id: 'core', enabled: true, path: 'rules/network-rules.json' }],
     },

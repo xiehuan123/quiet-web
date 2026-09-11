@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "candidate": {
+    "fingerprint_sha256": "06ae81d30a4a5dd075df2851cca542456f7dd515ae7b264fb37f60e90b78b099",
+    "files": [
+      { "path": "_metadata/generated_indexed_rulesets/_ruleset1", "sha256": "b786ad2c3eb9c6b84b85fd612c13f9e190128b881832b64784338b4a1b22a606" },
+      { "path": "assets/options-CLjxHj1t.css", "sha256": "61439d1f5a111a8924e07be5dbb53f530829352c682ed9b5cf63e991e2d5ad5d" },
+      { "path": "assets/popup-CYwBxoJJ.css", "sha256": "48a24692453bdd2a3c336ea3346214169822341506811260fb8d51553fdd49c4" },
+      { "path": "background.js", "sha256": "b2e84ba0cac00f1a28be1f5362bf2ea12a9ebf0360f4ec98263877f89eee23d8" },
+      { "path": "chunks/browser-DKnVyUgM.js", "sha256": "267d3c21422e04e403b6e46b4e77124697c993b78887decc29be9c961fa901ca" },
+      { "path": "chunks/options-hwWwuF1z.js", "sha256": "b268c27e502a63526f101093c256b0f81ab3da69962e2f3f6c25979719127582" },
+      { "path": "chunks/popup-CpLdL2J-.js", "sha256": "85b8b5073de2003b03de01a4b817f6476698a6c3d60aadad7ad30baf56264a4b" },
+      { "path": "content-scripts/content.css", "sha256": "6b3857b10bcfa37468c0b00a9071f3af154d36a17639dbd4901f6641aca971e5" },
+      { "path": "content-scripts/content.js", "sha256": "40988ebfbbdf324d91605fe4fcf8ad1531b5c979f3952a9857d191d750454b95" },
+      { "path": "icon/128.png", "sha256": "1667f7e8272214318595c3ae96f7289a54087026c3dd18988e6de759c48a9637" },
+      { "path": "icon/16.png", "sha256": "dcda2bb18038b4ec18a675bb09a3661b6c786f47172ea7f355f3b51738b8c8c7" },
+      { "path": "icon/32.png", "sha256": "da2f11c05c63a5d7ca57566dc220ecdcac086b5f3b943a5d3cbb941c41783340" },
+      { "path": "icon/48.png", "sha256": "dfc2fb9e6687fab17fefb070fd9e5783dc0acef4c22ce52cb6b8c8448e2878df" },
+      { "path": "icon/96.png", "sha256": "3ca112c1711f9a3718aeb38a29c7d0812c2f8cdad803d93a83f7f0a47780ab95" },
+      { "path": "manifest.json", "sha256": "b943131ffdd37784d9adb3ce1084126e31301145241199e5d361c50078aac7df" },
+      { "path": "options.html", "sha256": "3c5a16900f69bad4825601310a4f2edb68f49e769054c42f6854e4ad8bf81ddc" },
+      { "path": "popup.html", "sha256": "31dc0ae53e0ac8dfeaf42033a3641de23ff06aaa52330482454ab06412ad168b" },
+      { "path": "rules/network-rules.json", "sha256": "a5b4c728e3338b8783ea43238b54fd986890728bb6656c0b8caee307549a89d8" }
+    ]
+  },
+  "environment": {
+    "automation_provider": "chrome-devtools-mcp",
+    "browser_name": "HeadlessChrome",
+    "browser_version": "153.0.0.0",
+    "extension_id": "bppfpejancflkakphbgloeaidofdcfic",
+    "installation_type": "unpacked"
+  },
+  "browser_choice": {
+    "default_provider": "playwright-mcp",
+    "selected_provider": "chrome-devtools-mcp",
+    "reason": "The user explicitly selected the project-isolated Chrome DevTools MCP because the default Playwright MCP was not configured for extension install/action control.",
+    "user_decision": { "status": "approved", "evidence_path": "browser-choice-user-decision.md" }
+  },
+  "required_scenarios": ["install", "native_entry", "primary_flow", "reopen"],
+  "scenarios": [
+    {
+      "id": "install", "required": true, "status": "passed", "method": "real_browser_tool",
+      "steps": ["Installed the final root extension directory with Chrome DevTools MCP.", "Removed the earlier source-build test installation.", "Listed installed extensions."],
+      "expected": "Only the final directory installation is enabled as 广告净化 0.1.0.",
+      "actual": "Final directory installed as bppfpejancflkakphbgloeaidofdcfic and listed Enabled; the previous test ID was uninstalled.",
+      "artifactPaths": ["browser-environment.json", "mcp-raw-log.md"]
+    },
+    {
+      "id": "native_entry", "required": true, "status": "passed", "method": "real_browser_tool", "entry_kind": "native_action",
+      "steps": ["Selected and brought the HTTP fixture to the front.", "Triggered the installed extension action by final ID.", "Inspected the popup created by that action."],
+      "expected": "Native action opens a popup with exact hostname, network state, page count, site control and local-data boundary.",
+      "actual": "Popup showed 127.0.0.1, 规则已开启, 页面已隐藏 2, 暂停本站, and the privacy/coverage statement.",
+      "artifactPaths": ["popup-initial.snapshot.txt", "popup-initial.png", "mcp-raw-log.md"]
+    },
+    {
+      "id": "primary_flow", "required": true, "status": "passed", "method": "real_browser_tool",
+      "steps": ["Verified enabled network and page filtering plus every protected class on the expanded fixture.", "Triggered a dynamic ad through a real fixture button.", "Paused and restored the exact host through native popup with refresh checks.", "Created two host entries through native popups, opened packaged settings, removed one, then cleared all."],
+      "expected": "Only high-confidence ads are reversibly hidden; all protected/decoy content remains; site controls and both settings actions synchronize storage and DNR with complete feedback and focus.",
+      "actual": "Known ad request was blocked while normal resources loaded. Two static and one dynamic ad were hidden without removal; all twelve protected/decoy targets stayed visible. Pause restored DOM and network after refresh. Sorted two-host options, single removal, focus handoff, clear-all, empty focus, storage and dynamic rules passed.",
+      "artifactPaths": ["final-flow.json", "final-fixture.snapshot.txt", "final-fixture.png", "options-two-hosts.snapshot.txt", "options-two-hosts.png", "options-cleared.snapshot.txt", "options-cleared.png", "mcp-raw-log.md"]
+    },
+    {
+      "id": "reopen", "required": true, "status": "passed", "method": "real_browser_tool", "entry_kind": "native_action",
+      "steps": ["Set enabled=false and a non-empty exact-host allowlist through the final extension UI.", "Normally terminated only the Chrome main process with the exact project profile while keeping MCP alive.", "Triggered MCP relaunch, observed the unpacked-registration boundary, reinstalled the same final directory, and read settings/DNR plus native popup."],
+      "expected": "Both non-default settings survive a real browser relaunch for the same final extension ID; unpacked registration behavior is reported accurately.",
+      "actual": "Before and after relaunch/reinstall, final ID bppf... had enabled=false, allowedHosts=[127.0.0.1], dynamic rule 1144953630 and no enabled static rulesets. Native popup and network behavior agreed. Unpacked registration itself was not retained and is not claimed as persistent.",
+      "artifactPaths": ["browser-restart-persistence.json", "popup-before-browser-restart.snapshot.txt", "popup-before-browser-restart.png", "popup-after-browser-restart.snapshot.txt", "popup-after-browser-restart.png", "mcp-raw-log.md"]
+    },
+    {
+      "id": "public_observation", "required": false, "status": "passed", "method": "real_browser_tool",
+      "steps": ["Opened ABP official Blocking test page anonymously and captured DOM, all network requests and console.", "Opened Example Domain anonymously and captured DOM, network and console.", "Mapped each claimed subset versus out-of-scope ABP syntax without submitting forms."],
+      "expected": "Public pages remain usable, network/console observations are explicit, and unsupported ABP coverage is not overstated.",
+      "actual": "ABP headings loaded with zero extension markers, 9/9 requests returned 200 and console was empty; its pattern matrix is explicitly out of scope. Example Domain retained heading, text and link, one document request returned 200, console was empty and extension markers were zero.",
+      "artifactPaths": ["public-observations.json", "public-abp-blocking-final.png", "public-abp-blocking-final.snapshot.txt", "public-normal-example-final.png", "public-normal-example-final.snapshot.txt", "mcp-raw-log.md"]
+    }
+  ]
+}

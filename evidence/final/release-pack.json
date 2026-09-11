@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "status": "packed",
+  "build_dir": "/Users/xiehuan/Desktop/浏览器插件/quiet-web/extension",
+  "manifest": {
+    "name": "广告净化",
+    "version": "0.1.0",
+    "description": "减少常见广告请求，并可逆隐藏高置信广告容器。",
+    "manifest_version": 3
+  },
+  "errors": [],
+  "warnings": [],
+  "inventory": [
+    {
+      "path": "_metadata/generated_indexed_rulesets/_ruleset1",
+      "bytes": 1243,
+      "sha256": "b786ad2c3eb9c6b84b85fd612c13f9e190128b881832b64784338b4a1b22a606"
+    },
+    {
+      "path": "assets/options-CLjxHj1t.css",
+      "bytes": 2554,
+      "sha256": "61439d1f5a111a8924e07be5dbb53f530829352c682ed9b5cf63e991e2d5ad5d"
+    },
+    {
+      "path": "assets/popup-CYwBxoJJ.css",
+      "bytes": 2996,
+      "sha256": "48a24692453bdd2a3c336ea3346214169822341506811260fb8d51553fdd49c4"
+    },
+    {
+      "path": "background.js",
+      "bytes": 5384,
+      "sha256": "b2e84ba0cac00f1a28be1f5362bf2ea12a9ebf0360f4ec98263877f89eee23d8"
+    },
+    {
+      "path": "chunks/browser-DKnVyUgM.js",
+      "bytes": 760,
+      "sha256": "267d3c21422e04e403b6e46b4e77124697c993b78887decc29be9c961fa901ca"
+    },
+    {
+      "path": "chunks/options-hwWwuF1z.js",
+      "bytes": 1924,
+      "sha256": "b268c27e502a63526f101093c256b0f81ab3da69962e2f3f6c25979719127582"
+    },
+    {
+      "path": "chunks/popup-CpLdL2J-.js",
+      "bytes": 3567,
+      "sha256": "85b8b5073de2003b03de01a4b817f6476698a6c3d60aadad7ad30baf56264a4b"
+    },
+    {
+      "path": "content-scripts/content.css",
+      "bytes": 65,
+      "sha256": "6b3857b10bcfa37468c0b00a9071f3af154d36a17639dbd4901f6641aca971e5"
+    },
+    {
+      "path": "content-scripts/content.js",
+      "bytes": 9101,
+      "sha256": "40988ebfbbdf324d91605fe4fcf8ad1531b5c979f3952a9857d191d750454b95"
+    },
+    {
+      "path": "icon/128.png",
+      "bytes": 498,
+      "sha256": "1667f7e8272214318595c3ae96f7289a54087026c3dd18988e6de759c48a9637"
+    },
+    {
+      "path": "icon/16.png",
+      "bytes": 129,
+      "sha256": "dcda2bb18038b4ec18a675bb09a3661b6c786f47172ea7f355f3b51738b8c8c7"
+    },
+    {
+      "path": "icon/32.png",
+      "bytes": 185,
+      "sha256": "da2f11c05c63a5d7ca57566dc220ecdcac086b5f3b943a5d3cbb941c41783340"
+    },
+    {
+      "path": "icon/48.png",
+      "bytes": 227,
+      "sha256": "dfc2fb9e6687fab17fefb070fd9e5783dc0acef4c22ce52cb6b8c8448e2878df"
+    },
+    {
+      "path": "icon/96.png",
+      "bytes": 388,
+      "sha256": "3ca112c1711f9a3718aeb38a29c7d0812c2f8cdad803d93a83f7f0a47780ab95"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 788,
+      "sha256": "b943131ffdd37784d9adb3ce1084126e31301145241199e5d361c50078aac7df"
+    },
+    {
+      "path": "options.html",
+      "bytes": 2054,
+      "sha256": "3c5a16900f69bad4825601310a4f2edb68f49e769054c42f6854e4ad8bf81ddc"
+    },
+    {
+      "path": "popup.html",
+      "bytes": 2193,
+      "sha256": "31dc0ae53e0ac8dfeaf42033a3641de23ff06aaa52330482454ab06412ad168b"
+    },
+    {
+      "path": "rules/network-rules.json",
+      "bytes": 1157,
+      "sha256": "a5b4c728e3338b8783ea43238b54fd986890728bb6656c0b8caee307549a89d8"
+    }
+  ],
+  "checks_scope": {
+    "performed": [
+      "MV3 基础字段与版本",
+      "manifest 声明的本地资源",
+      "HTML 常见静态资源",
+      "默认语言消息",
+      "图标存在与 PNG 尺寸",
+      "敏感文件与路径",
+      "部分远程执行和开发地址启发式"
+    ],
+    "not_performed": [
+      "完整 Chrome manifest schema 校验",
+      "全部动态依赖分析",
+      "完整安全与隐私审计",
+      "浏览器安装和功能测试",
+      "商店后台检查",
+      "审核或发布"
+    ],
+    "warning_policy": "警告必须由开发者逐项复核；零警告也不代表没有远程代码、隐私问题或功能故障。"
+  },
+  "archive": {
+    "path": "/Users/xiehuan/Desktop/浏览器插件/quiet-web/artifacts/quiet-web-0.1.0.zip",
+    "bytes": 17489,
+    "sha256": "f297077f13e25b9df45d541402dba1d7d4b93fc015a493be2f00d5f13422d121",
+    "file_count": 18,
+    "manifest_at_root": true
+  }
+}

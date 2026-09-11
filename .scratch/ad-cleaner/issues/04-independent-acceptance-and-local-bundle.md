@@ -3,7 +3,7 @@
 **Type:** independent acceptance  
 **Parent:** `../spec.md`  
 **Blocked by:** 01 — 网络保护与总开关; 02 — 高置信页面净化与可逆恢复; 03 — 本站暂停、允许清单与持久恢复  
-**Status:** blocked  
+**Status:** in-progress
 **Required skills:** `chrome-extensions`, `code-review`, `browser-extension-launch` acceptance and bundle tools  
 **Ownership:** final `extension/`, cross-feature browser evidence, screenshots, raw MCP records, final review, acceptance gate, release-bundle reports, Chinese usage and final report
 

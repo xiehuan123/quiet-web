@@ -1,0 +1,20 @@
+uid=18_0 RootWebArea "广告净化设置" url="chrome-extension://bppfpejancflkakphbgloeaidofdcfic/options.html"
+  uid=18_1 main
+    uid=18_2 StaticText "广告净化"
+    uid=18_3 heading "设置" level="1"
+    uid=18_4 StaticText "管理按精确 hostname 暂停的网站。"
+    uid=18_5 region "暂停的网站"
+      uid=18_6 heading "暂停的网站" level="2"
+      uid=18_7 StaticText "只影响列出的精确 hostname，不自动包含其他子域名。"
+      uid=18_8 button "清空暂停列表" disableable disabled
+      uid=18_9 list live="polite" relevant="additions text"
+        uid=18_10 StaticText "127.0.0.1"
+        uid=18_11 button "恢复 127.0.0.1 的保护" disableable disabled
+    uid=18_12 region "使用与边界"
+      uid=18_13 heading "使用与边界" level="2"
+      uid=18_14 StaticText "设置只保存在这台电脑，不上传页面内容。"
+      uid=18_15 StaticText "暂停或恢复网络规则后需要刷新页面，已经阻断的响应无法即时找回。"
+      uid=18_16 StaticText "扩展只处理小规模已知广告请求和多信号高置信广告容器，不能保证所有网站完全无广告。"
+      uid=18_17 StaticText "不会绕过付费墙、验证码、登录、支付、安全确认或 cookie 选择。"
+    uid=18_18 status atomic live="polite" relevant="additions text"
+      uid=20_0 StaticText "正在恢复 127.0.0.1…"
