@@ -11,7 +11,7 @@ All paths are inside this isolated project. Hashes are SHA-256 of the entry file
 | `extension-create` | `579b05e875ae6b63ce98aad54e4e0a4ad0b55afb3779e77f3d9cc511e99fc1f2` | `quiet-web`, Vanilla TypeScript, popup/content/background/options | `source/`, `source/package-lock.json`, production build | executed |
 | `to-spec` | `5d26479544b08048d3a8f79d937b39bc613a617f026b3fd083bafc1e99a7b811` | Accepted brief plus verified research | `.scratch/ad-cleaner/spec.md` | executed |
 | `to-tickets` | `5ecdf1d4df8a360ed39df21a2347f97ba177afd449a577da4f6b6ea8e1ebb808` | Published local spec | `.scratch/ad-cleaner/issues/01` through `04` | executed |
-| `implement` | `6d3fd9e83b8f36e5213854779db49b256a457a7ebb4a503e53fa7dcff696adc3` | One unblocked issue at a time | Pending per-ticket commits and evidence | read |
+| `implement` | `6d3fd9e83b8f36e5213854779db49b256a457a7ebb4a503e53fa7dcff696adc3` | Ticket 01 network protection and master switch | `source/`, `evidence/ticket-01/`, `.scratch/ad-cleaner/issues/01-*` | executed (ticket 01) |
 | `tdd` | `5e6b9c16b547113e90afbb946489d1c1384be5c2128f0159bd0bee57251ecf08` | Public seams delegated by the accepted run prompt | Rule, protection, state, and fixture tests | read |
 | `codebase-design` | `a8d50abac5a4018f60e1d911d4b6f4e36454ca14d6c390c0695a578c7de65dad` | Place seams between pure policy and Chrome adapters | Architecture and test seams in spec | executed |
 | `product-designer` | `d0995fcc2a4accdb7df4a47d01a7263af6423298db95b76f8eb186a7b95caf74` | Popup/settings flow and recovery feedback | Product flow and UX acceptance criteria in spec | executed |
@@ -25,3 +25,4 @@ The upstream setup/spec/ticket skills normally pause for confirmation. This run'
 ## Diagnosing-bugs executions
 
 - WXT scaffold runtime mismatch: `records/diagnostics/scaffold-node-runtime.md`; Node 20 engine mismatch reproduced, Node 24 isolated environment applied, original scaffold compile/build reverified.
+- Native popup target and active URL permission: `records/diagnostics/ticket-01-native-target.md`; red regression tests and real action revalidation complete.

@@ -1,0 +1,22 @@
+{
+  "blocked": [
+    { "url": "https://securepubads.g.doubleclick.net/tag/js/gpt.js", "resourceType": "script" },
+    { "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", "resourceType": "script" },
+    { "url": "https://www.googleadservices.com/pagead/conversion.js", "resourceType": "script" },
+    { "url": "https://aax.amazon-adsystem.com/e/dtb/bid", "resourceType": "xmlhttprequest" },
+    { "url": "https://cdn.taboola.com/libtrc/example/loader.js", "resourceType": "script" },
+    { "url": "https://widgets.outbrain.com/outbrain.js", "resourceType": "script" },
+    { "url": "https://pagead2.googlesyndication.com/simgad/123", "resourceType": "image" },
+    { "url": "https://securepubads.g.doubleclick.net/static/frame.html", "resourceType": "sub_frame" }
+  ],
+  "allowed": [
+    { "url": "https://doubleclick.net/", "resourceType": "main_frame" },
+    { "url": "https://news.example/doubleclick.net/article", "resourceType": "script" },
+    { "url": "https://notdoubleclick.net/app.js", "resourceType": "script" },
+    { "url": "https://googlesyndication.com/docs", "resourceType": "main_frame" },
+    { "url": "https://amazon.com/product/image.jpg", "resourceType": "image" },
+    { "url": "https://taboola.example/assets/app.js", "resourceType": "script" },
+    { "url": "https://outbrain.com/", "resourceType": "main_frame" },
+    { "url": "https://developer.chrome.com/static/site.js", "resourceType": "script" }
+  ]
+}

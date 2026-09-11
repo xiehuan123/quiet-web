@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "candidate": {
+    "fingerprint_sha256": "022c5a093184bd4a56b6325e716fb1f97d5322169888bef8add53763a2a696ac",
+    "files": [
+      { "path": "_metadata/generated_indexed_rulesets/_ruleset1", "sha256": "b786ad2c3eb9c6b84b85fd612c13f9e190128b881832b64784338b4a1b22a606" },
+      { "path": "assets/popup-D0huK-UI.css", "sha256": "d60fa350797509ee8fc566524ef549f269cd1bc199cf4a6ac914f09fba2ebbb8" },
+      { "path": "background.js", "sha256": "8a04d072e9b0167d48efa2c5a40e3706374b12d456c420f8d0dd5f313c774a8d" },
+      { "path": "chunks/popup-BRYlQldq.js", "sha256": "55d4e064927b5e09c1ecd5ad0968a63ea1f7d4e61dcaec0f010b5be82bec861b" },
+      { "path": "content-scripts/content.js", "sha256": "ba3dbef0fd1c3e1124e0f59bea37e3c83f2700e2b9fc6a90a6de43a1a09c718d" },
+      { "path": "icon/128.png", "sha256": "1667f7e8272214318595c3ae96f7289a54087026c3dd18988e6de759c48a9637" },
+      { "path": "icon/16.png", "sha256": "dcda2bb18038b4ec18a675bb09a3661b6c786f47172ea7f355f3b51738b8c8c7" },
+      { "path": "icon/32.png", "sha256": "da2f11c05c63a5d7ca57566dc220ecdcac086b5f3b943a5d3cbb941c41783340" },
+      { "path": "icon/48.png", "sha256": "dfc2fb9e6687fab17fefb070fd9e5783dc0acef4c22ce52cb6b8c8448e2878df" },
+      { "path": "icon/96.png", "sha256": "3ca112c1711f9a3718aeb38a29c7d0812c2f8cdad803d93a83f7f0a47780ab95" },
+      { "path": "manifest.json", "sha256": "db6b6cf548c9414b229db4fc04ae25c607cc2f8a73b0e95b71efdf1d6c958c66" },
+      { "path": "popup.html", "sha256": "83f864042c1861563d9badbab9702b3016832447dd29beaec9308f8fc30c5376" },
+      { "path": "rules/network-rules.json", "sha256": "a5b4c728e3338b8783ea43238b54fd986890728bb6656c0b8caee307549a89d8" }
+    ]
+  },
+  "environment": {
+    "automation_provider": "chrome-devtools-mcp",
+    "browser_name": "HeadlessChrome",
+    "browser_version": "153.0.0.0",
+    "extension_id": "ooadlcdjhdoaanegcfieeidedohkbnjg",
+    "installation_type": "unpacked"
+  },
+  "browser_choice": {
+    "default_provider": "playwright-mcp",
+    "selected_provider": "chrome-devtools-mcp",
+    "reason": "The user explicitly selected the project-isolated Chrome DevTools MCP because the default Playwright MCP was not configured for extension install/action control.",
+    "user_decision": { "status": "approved", "evidence_path": "browser-choice-user-decision.md" }
+  },
+  "required_scenarios": ["install", "native_entry", "primary_flow", "reopen"],
+  "scenarios": [
+    {
+      "id": "install", "required": true, "status": "passed", "method": "real_browser_tool",
+      "steps": ["Installed the production WXT build with Chrome DevTools MCP install_extension.", "Listed installed extensions and service worker."],
+      "expected": "广告净化 v0.1.0 is enabled as an unpacked extension.",
+      "actual": "Extension ooadlcdjhdoaanegcfieeidedohkbnjg listed as 广告净化 v0.1.0 Enabled with its service worker.",
+      "artifactPaths": ["mcp-raw-log.md", "browser-environment.json"]
+    },
+    {
+      "id": "native_entry", "required": true, "status": "passed", "method": "real_browser_tool", "entry_kind": "native_action",
+      "steps": ["Selected the local fixture tab.", "Triggered the installed extension action by ID.", "Waited for and inspected the created extension popup page."],
+      "expected": "The native action opens the popup and identifies the actual HTTP page.",
+      "actual": "Popup opened from native action, showed 保护已开启 and current page 127.0.0.1 after the target-tab regression fix.",
+      "artifactPaths": ["popup-supported-after-review-fix.snapshot.txt", "popup-unsupported-after-review-fix.snapshot.txt", "popup-enabled.png", "mcp-raw-log.md"]
+    },
+    {
+      "id": "primary_flow", "required": true, "status": "passed", "method": "real_browser_tool",
+      "steps": ["Loaded a local page with a legitimate local image and a googlesyndication subresource.", "Observed enabled network results.", "Turned the master switch off in the real popup and reloaded.", "Turned it on again and reloaded."],
+      "expected": "Only the known advertising subresource is blocked while enabled; it is not extension-blocked while disabled; local resources remain available.",
+      "actual": "Enabled: ad request net::ERR_BLOCKED_BY_CLIENT and local image 200. Disabled: same ad URL reached the server and returned 404, local image remained 200. Re-enabled: blocked again.",
+      "artifactPaths": ["mcp-raw-log.md", "popup-enabled.png"]
+    },
+    {
+      "id": "reopen", "required": true, "status": "passed", "method": "real_browser_tool", "entry_kind": "native_action",
+      "steps": ["Turned protection off in the popup.", "Closed popup page 4.", "Triggered the installed extension action again.", "Inspected the reopened popup."],
+      "expected": "The master setting remains off when the native popup is closed and reopened.",
+      "actual": "Reopened popup showed 保护已暂停, an unchecked switch, current page 127.0.0.1, and page hidden count 0.",
+      "artifactPaths": ["popup-reopen-off.snapshot.txt", "mcp-raw-log.md"]
+    }
+  ]
+}

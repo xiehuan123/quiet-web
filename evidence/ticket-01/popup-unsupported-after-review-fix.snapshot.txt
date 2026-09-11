@@ -1,0 +1,45 @@
+uid=7_0 RootWebArea "广告净化" url="chrome-extension://ooadlcdjhdoaanegcfieeidedohkbnjg/popup.html"
+  uid=7_1 ignored
+    uid=7_2 ignored
+      uid=7_3 main
+        uid=7_4 sectionheader
+          uid=7_5 ignored
+            uid=7_6 heading "广告净化" level="1"
+              uid=7_7 StaticText "广告净化"
+                uid=7_8 InlineTextBox "广告净化"
+            uid=7_9 paragraph
+              uid=7_10 StaticText "保护已开启"
+                uid=7_8 InlineTextBox "保护已开启"
+        uid=7_11 region "网络与页面保护"
+          uid=7_12 ignored
+            uid=7_13 heading "网络与页面保护" level="2"
+              uid=7_14 StaticText "网络与页面保护"
+                uid=7_8 InlineTextBox "网络与页面保护"
+            uid=7_15 paragraph
+              uid=7_16 StaticText "减少已知广告请求；页面净化将在下一模块启用。"
+                uid=7_8 InlineTextBox "减少已知广告请求；页面净化将在下一模"
+                uid=7_8 InlineTextBox "块启用。"
+          uid=7_17 LabelText
+            uid=7_18 switch "开启广告净化" checked
+            uid=7_19 ignored
+            uid=7_20 ignored
+              uid=7_21 StaticText "开启广告净化"
+                uid=7_8 InlineTextBox "开启广告净化"
+        uid=7_22 region "当前页面"
+          uid=7_23 ignored
+            uid=7_24 ignored
+              uid=7_25 StaticText "当前页面"
+                uid=7_8 InlineTextBox "当前页面"
+            uid=7_26 strong
+              uid=7_27 StaticText "此页面不受支持"
+                uid=7_8 InlineTextBox "此页面不受支持"
+          uid=7_28 ignored
+            uid=7_29 ignored
+              uid=7_30 StaticText "页面已隐藏"
+                uid=7_8 InlineTextBox "页面已隐藏"
+            uid=7_31 strong
+              uid=7_32 StaticText "不适用"
+                uid=7_8 InlineTextBox "不适用"
+        uid=7_33 status atomic live="polite" relevant="additions text"
+          uid=7_34 StaticText "Chrome 内部页等受限页面无法处理。"
+            uid=7_8 InlineTextBox "Chrome 内部页等受限页面无法处理。"

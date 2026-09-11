@@ -1,13 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Default Popup Title</title>
+    <title>广告净化</title>
     <meta name="manifest.type" content="browser_action" />
   </head>
   <body>
-    <div id="app"></div>
+    <main class="shell">
+      <header class="header"><div class="brand-mark" aria-hidden="true">净</div><div><h1>广告净化</h1><p id="summary">正在读取保护状态…</p></div></header>
+      <section class="control" aria-labelledby="master-label">
+        <div><h2 id="master-label">网络与页面保护</h2><p>减少已知广告请求；页面净化将在下一模块启用。</p></div>
+        <label class="switch"><input id="master-toggle" type="checkbox" role="switch" disabled /><span aria-hidden="true"></span><span class="sr-only">开启广告净化</span></label>
+      </section>
+      <section class="status-card" aria-label="当前页面">
+        <div class="status-row"><span>当前页面</span><strong id="current-site">正在识别…</strong></div>
+        <div class="status-row"><span>页面已隐藏</span><strong id="hidden-count">—</strong></div>
+      </section>
+      <p id="feedback" class="feedback" role="status" aria-live="polite">设置只保存在这台电脑。</p>
+    </main>
     <script type="module" src="./main.ts"></script>
   </body>
 </html>

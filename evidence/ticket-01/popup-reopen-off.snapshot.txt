@@ -1,0 +1,45 @@
+uid=4_0 RootWebArea "广告净化" url="chrome-extension://ooadlcdjhdoaanegcfieeidedohkbnjg/popup.html"
+  uid=4_1 ignored
+    uid=4_2 ignored
+      uid=4_3 main
+        uid=4_4 sectionheader
+          uid=4_5 ignored
+            uid=4_6 heading "广告净化" level="1"
+              uid=4_7 StaticText "广告净化"
+                uid=4_8 InlineTextBox "广告净化"
+            uid=4_9 paragraph
+              uid=4_10 StaticText "保护已暂停"
+                uid=4_8 InlineTextBox "保护已暂停"
+        uid=4_11 region "网络与页面保护"
+          uid=4_12 ignored
+            uid=4_13 heading "网络与页面保护" level="2"
+              uid=4_14 StaticText "网络与页面保护"
+                uid=4_8 InlineTextBox "网络与页面保护"
+            uid=4_15 paragraph
+              uid=4_16 StaticText "减少已知广告请求；页面净化将在下一模块启用。"
+                uid=4_8 InlineTextBox "减少已知广告请求；页面净化将在下一模"
+                uid=4_8 InlineTextBox "块启用。"
+          uid=4_17 LabelText
+            uid=4_18 switch "开启广告净化"
+            uid=4_19 ignored
+            uid=4_20 ignored
+              uid=4_21 StaticText "开启广告净化"
+                uid=4_8 InlineTextBox "开启广告净化"
+        uid=4_22 region "当前页面"
+          uid=4_23 ignored
+            uid=4_24 ignored
+              uid=4_25 StaticText "当前页面"
+                uid=4_8 InlineTextBox "当前页面"
+            uid=4_26 strong
+              uid=4_27 StaticText "127.0.0.1"
+                uid=4_8 InlineTextBox "127.0.0.1"
+          uid=4_28 ignored
+            uid=4_29 ignored
+              uid=4_30 StaticText "页面已隐藏"
+                uid=4_8 InlineTextBox "页面已隐藏"
+            uid=4_31 strong
+              uid=4_32 StaticText "0"
+                uid=4_8 InlineTextBox "0"
+        uid=4_33 status atomic live="polite" relevant="additions text"
+          uid=4_34 StaticText "设置只保存在这台电脑。"
+            uid=4_8 InlineTextBox "设置只保存在这台电脑。"
